@@ -2,21 +2,21 @@ const TelegramBot = require("node-telegram-bot-api");
 require("dotenv").config(); // Загружаем переменные из .env
 
 const token = process.env.BOT_TOKEN; // Загружаем токен из переменных окружения
-const chatId = process.env.MEDITATION_CHAT_ID; // Загружаем chat_id канала
+const chatId = process.env.MAIN_CHAT_ID; // Загружаем chat_id канала
 
 const bot = new TelegramBot(token, { polling: true });
 
 // Ссылки на каналы
 const channels = {
-  meditations: "https://t.me/+tnqsDWWXLKQzODFi",
-  live_streams: "https://t.me/+Rz1RMa-Z_7szY2Vi",
+  meditations: "https://t.me/c/2401584032/19?thread=15",
+  live_streams: "https://t.me/c/2401584032/20?thread=16",
   experts: "https://t.me/+WrzlnTrHttAzNjgy",
   newbie: "https://t.me/+ocGHC-M2IbQ5ZWRi",
-  metaphysics: "https://t.me/+ZbACe8DwhK45YTNi",
+  metaphysics: "https://t.me/c/2401584032/22?thread=18",
   lectures: "https://t.me/+nqRkShLd9HZiNjYy",
   ask_question: "@magicOfDay_bot",
   chat: "https://t.me/+2UPdQu4PK302YTAy",
-  tarot: "https://t.me/+JVANRhwo2tY5Njhi",
+  tarot: "https://t.me/c/2401584032/21?thread=17",
 };
 
 // Функция отправки поста с кнопками
@@ -34,8 +34,8 @@ async function sendPost() {
             url: "https://t.me/Consult_magic_bot",
           },
         ],
-        [{ text: "🆕 Новичку", url: channels.newbie }],
-        [{ text: "🌌 Тело и метофизика", url: channels.metaphysics }],
+        // [{ text: "🆕 Новичку", url: channels.newbie }],
+        [{ text: "🌌 Оздоровление тела", url: channels.metaphysics }],
         [{ text: "📚 Лекции", url: channels.lectures }],
         [{ text: "❓ Задать вопрос", url: "https://t.me/magicOfDay_bot" }],
         [{ text: "💬 Общий чат", url: channels.chat }],

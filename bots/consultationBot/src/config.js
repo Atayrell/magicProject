@@ -6,7 +6,7 @@ require("dotenv").config();
 
 module.exports = {
   BOT_TOKEN: process.env.BOT_TOKEN,
-  MANAGER_LINK: "https://t.me/@Dmitry_Astap",
+  MANAGER_LINK: "https://t.me/Dmitry_Astap",
   experts: {
     svetla: {
       photo: svetlana,
