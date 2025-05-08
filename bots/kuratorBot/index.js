@@ -49,13 +49,13 @@ bot.on("callback_query", async (query) => {
           inline_keyboard: [
             [
               {
-                text: "🧾 Оплата за реквизитами",
+                text: "🧾 Международный перевод по реквизитами",
                 callback_data: "pay_for_rekviz",
               },
             ],
             [
               {
-                text: "🌎 Международный перевод paypal",
+                text: "🌎 Paypal",
                 callback_data: "pay_for_paypal",
               },
             ],
